@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.044eaef6.chunk.css",
+    "main.js": "/static/js/main.c04561d8.chunk.js",
+    "main.js.map": "/static/js/main.c04561d8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d0e6ab29.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d0e6ab29.js.map",
+    "static/js/2.1e80d05c.chunk.js": "/static/js/2.1e80d05c.chunk.js",
+    "static/js/2.1e80d05c.chunk.js.map": "/static/js/2.1e80d05c.chunk.js.map",
+    "static/js/3.da59231a.chunk.js": "/static/js/3.da59231a.chunk.js",
+    "static/js/3.da59231a.chunk.js.map": "/static/js/3.da59231a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.044eaef6.chunk.css.map": "/static/css/main.044eaef6.chunk.css.map",
+    "static/js/2.1e80d05c.chunk.js.LICENSE.txt": "/static/js/2.1e80d05c.chunk.js.LICENSE.txt",
+    "static/media/modal.module.scss": "/static/media/close.074549ce.svg",
+    "static/media/App.scss": "/static/media/left-arrow.4848cc53.svg",
+    "static/media/papa1.e07bd0a1.jpg": "/static/media/papa1.e07bd0a1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0e6ab29.js",
+    "static/js/2.1e80d05c.chunk.js",
+    "static/css/main.044eaef6.chunk.css",
+    "static/js/main.c04561d8.chunk.js"
+  ]
+}

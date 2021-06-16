@@ -1,0 +1,38 @@
+.cell1,
+.cell2 {
+    position: relative;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 1rem;
+    padding: 1rem;
+    // background: #f77;
+    transform-origin: 50% 35%;
+}
+.cell1 {
+    animation: anim infinite 1s linear;
+}
+.cell2 {
+    top: -50%;
+    animation: anim infinite 1s linear reverse;
+    animation-delay: 0.5s;
+}
+
+@keyframes anim {
+    0% {
+        background: #f77;
+        transform: scale(1) rotate(0deg);
+    }
+    33% {
+        background: #7f7;
+        transform: scale(1.1) rotate(120deg);
+    }
+    66% {
+        background: #77f;
+        transform: scale(0.9) rotate(240deg);
+    }
+    100% {
+        background: #f77;
+        transform: scale(1) rotate(360deg);
+    }
+}

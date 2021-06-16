@@ -1,0 +1,136 @@
+.modal {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(#0006, #000d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(-100px);
+    // perspective: 500px;
+    overflow: hidden;
+}
+.close {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: url("../../assets/svg/close.svg");
+    background-size: cover;
+    cursor: pointer;
+    z-index: 10;
+}
+.controls {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    & > .up,
+    & > .down {
+        cursor: pointer;
+        position: fixed;
+        height: 40px;
+        width: 40px;
+        z-index: 10;
+    }
+    & > .up {
+        right: 0;
+        background: url("../../assets/svg/left-arrow.svg");
+        transform: rotateZ(180deg);
+    }
+    & > .down {
+        left: 0;
+        background: url("../../assets/svg/left-arrow.svg");
+    }
+}
+.up,
+.down {
+    cursor: pointer;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    z-index: 20;
+}
+.up {
+    right: 0;
+    background: url("../../assets/svg/left-arrow.svg");
+    transform: rotateZ(180deg);
+}
+.down {
+    left: 0;
+    background: url("../../assets/svg/left-arrow.svg");
+}
+.inner_container {
+    overflow: scroll;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    perspective: 500px;
+}
+.link {
+    overflow: hidden;
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+    margin: 1rem;
+    background: #eee;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    transform: rotateX(5deg);
+    box-shadow: 0.5rem 0.5rem 0.5rem #0007;
+    min-width: 2rem;
+    min-height: 2rem;
+    &::after {
+        transition: 0.5s;
+        content: "";
+        position: absolute;
+        // right: -100%;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 50%;
+        background: linear-gradient(
+            to bottom,
+            rgba(229, 172, 142, 0),
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(229, 172, 142, 0)
+        );
+        // background: #000;
+        transform: rotateZ(-10deg);
+    }
+    &:hover {
+        transform: rotateX(0deg);
+        &::after {
+            top: 110%;
+        }
+    }
+}
+.current {
+    box-shadow: -0.5rem -0.5rem 0.5rem #ffa;
+}
+.big {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // box-shadow: 0 0 1rem #000;
+}
+@keyframes blink {
+    100% {
+        transform: translate(200%, 100%) rotate(-45deg);
+        // left: 100%;
+    }
+}

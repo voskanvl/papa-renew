@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { FC, useCallback, useState } from "react";
+import { Modal } from "./components/modal/modal";
+import {
+    BrowserRouter as Router,
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import { LanguageSwitcher } from "./components/languageSwitcher/languageSwitcher";
+import About from "./components/about"
+import AlbumList from "./components/albumlist/albumlist"
+
+const App: FC = () => {
+    const [showModal, setShowModalInner] = useState(false);
+    const setShowModal = useCallback(setShowModalInner, [setShowModalInner])
+
+    const result = (
+        <Router>
+            <About />
+            <AlbumList setmodal={setShowModal} />
+            <Modal show={showModal} setmodal={setShowModal} />
+            <LanguageSwitcher />
+        </Router>
+    )
+    return result
 }
-
 export default App;
