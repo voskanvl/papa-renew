@@ -12,14 +12,14 @@ export default memo(() => {
     const about = useRef(null)
     useEffect(() => {
         gsap.to(about.current, {
-            yPercent: 0,
+            yPercent: -50,
             // scale: 0.8,
             scrollTrigger: {
+                start: "top 10%",
+                end: "bottom top",
                 trigger: "#about",
-                // start: "top top",
-                // end: "bottom top",
                 pin: true,
-                // scrub: 1,
+                scrub: 1,
                 pinSpacing: false,
             }
         })
