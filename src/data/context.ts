@@ -1,20 +1,20 @@
-import { createContext } from "react";
+import { createContext } from "react"
 
 export type DataContext = {
-    _id?: { $oid: string };
-    id: string;
+    _id?: { $oid: string }
+    id: string
     spec: {
-        mass: string;
-        size: { w: string; l: string; h: string };
-        material: string;
-    };
-    desc: string;
-    images: string[];
-    title: string;
-    eng: string;
-};
+        mass: string
+        size: { w: string; l: string; h: string }
+        material: string
+    }
+    desc: string
+    images: string[]
+    title: string
+    eng: string
+}
 
-const initValue: DataContext[] = [
+export const initValue: DataContext[] = [
     {
         id: "",
         spec: {
@@ -27,5 +27,5 @@ const initValue: DataContext[] = [
         title: "",
         eng: "",
     },
-];
-export const Context = createContext(initValue);
+]
+export const Context = createContext(initValue)
